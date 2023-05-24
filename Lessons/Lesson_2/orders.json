@@ -1,0 +1,25 @@
+{
+    "orders": [
+        {
+            "item": "Intel Core i5 - 12400F",
+            "quantity": "1",
+            "price": "14830",
+            "buyer": "Иванов",
+            "date": "01.05.2023"
+        },
+        {
+            "item": "NVIDIA GeForce RTX 3060 Palit Dual 12Gb",
+            "quantity": "1",
+            "price": "33950",
+            "buyer": "Петров",
+            "date": "02.05.2023"
+        },
+        {
+            "item": "MSI PRO H610M-E ",
+            "quantity": "1",
+            "price": "6790",
+            "buyer": "Сидоров",
+            "date": "03.05.2023"
+        }
+    ]
+}
