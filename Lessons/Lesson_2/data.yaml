@@ -1,0 +1,11 @@
+items:
+- motherboard
+- CPU
+- RAM
+- SSD
+items_quantity: 4
+items_ptice:
+  motherboard: 6900₽
+  CPU: 15000₽
+  RAM: 5300₽
+  SSD: 4800₽
