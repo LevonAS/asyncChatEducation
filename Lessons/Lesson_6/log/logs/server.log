@@ -1,21 +1,50 @@
-2023-06-05 18:46:01,962 - CRITICAL   - server_log_config - Тест логгера: критическая ошибка 
-2023-06-05 18:46:01,962 - ERROR      - server_log_config - Тест логгера: ошибка 
-2023-06-05 18:46:01,962 - WARNING    - server_log_config - Тест логгера: предупреждения 
-2023-06-05 18:46:01,962 - DEBUG      - server_log_config - Тест логгера: отладочная информация 
-2023-06-05 18:46:01,963 - INFO       - server_log_config - Тест логгера: информационное сообщение 
-2023-06-05 18:49:15,027 - CRITICAL   - server     - В качастве порта может быть указано только число в диапазоне от 1024 до 65535. 
-2023-06-05 18:50:00,076 - INFO       - server     - Сервер запущен! 
-2023-06-05 18:52:25,818 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 40982):
- {'action': 'presence', 'time': 1685980345.8185706, 'levon': {'account_name': 'Guest'}}
-Код ответа клиенту: {'response': 200} 
+2023-06-08 16:53:19,387 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
 
-2023-06-05 18:53:48,876 - INFO       - server     - Сервер запущен!
-Адрес: 127.0.0.1 Порт: 7778
 Для выхода нажмите CTRL+C
  
-2023-06-05 18:53:59,124 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 38718):
- {'action': 'presence', 'time': 1685980439.1248138, 'levon': {'account_name': 'Guest'}}
+2023-06-08 16:53:48,176 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45532)>,), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:53:48,177 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232428.1714907, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:53:48,177 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45532)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:53:48,177 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 45532):
+ {'action': 'presence', 'time': 1686232428.1714907, 'levon': {'account_name': 'Guest'}}
 Код ответа клиенту: {'response': 200} 
-2023-06-05 18:54:02,744 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 38734):
- {'action': 'presence', 'time': 1685980442.7441685, 'levon': {'account_name': 'Guest'}}
+2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34264)>,), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232475.8821886, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34264)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:35,885 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 34264):
+ {'action': 'presence', 'time': 1686232475.8821886, 'levon': {'account_name': 'Guest'}}
+Код ответа клиенту: {'response': 200} 
+2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 32962)>,), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232494.9841135, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 32962)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
+2023-06-08 16:54:54,987 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 32962):
+ {'action': 'presence', 'time': 1686232494.9841135, 'levon': {'account_name': 'Guest'}}
+Код ответа клиенту: {'response': 200} 
+2023-06-08 17:04:36,162 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-08 17:20:48,082 - ERROR      - server     - Принято некорретное сообщение от клиента! 
+2023-06-08 17:21:10,123 - ERROR      - server     - Принято некорретное сообщение от клиента! 
+2023-06-08 17:21:34,896 - ERROR      - server     - Принято некорретное сообщение от клиента! 
+
+
+2023-06-08 17:27:54,417 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-08 17:27:59,512 - DEBUG      - server     - Из модуля "utils" была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39234)>,), {}. Инициатор вызова - "server" 
+2023-06-08 17:27:59,512 - DEBUG      - server     - Из модуля "utils" была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686234479.5067255, 'levon': {'account_name': 'Guest'}},), {}. Инициатор вызова - "server" 
+2023-06-08 17:27:59,513 - DEBUG      - server     - Из модуля "utils" была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 39234)>, {'response': 200}), {}. Инициатор вызова - "server" 
+2023-06-08 17:27:59,513 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 39234):
+ {'action': 'presence', 'time': 1686234479.5067255, 'levon': {'account_name': 'Guest'}}
 Код ответа клиенту: {'response': 200} 
