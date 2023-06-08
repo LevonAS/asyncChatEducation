@@ -1,28 +1,3 @@
-2023-06-08 16:53:19,387 - INFO       - server     - Сервер запущен с настройками по умолчанию!
-Адрес: 127.0.0.1 Порт: 7777
-Для ручных настроек подключения используйте аргументы командной строки:
-$ python server.py -a [ip-адрес] -p [порт сервера]
-
-Для выхода нажмите CTRL+C
- 
-2023-06-08 16:53:48,176 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45532)>,), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:53:48,177 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232428.1714907, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:53:48,177 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45532)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:53:48,177 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 45532):
- {'action': 'presence', 'time': 1686232428.1714907, 'levon': {'account_name': 'Guest'}}
-Код ответа клиенту: {'response': 200} 
-2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34264)>,), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232475.8821886, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:35,885 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 34264)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:35,885 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 34264):
- {'action': 'presence', 'time': 1686232475.8821886, 'levon': {'account_name': 'Guest'}}
-Код ответа клиенту: {'response': 200} 
-2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "get_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 32962)>,), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "parse_message" c параметрами ({'action': 'presence', 'time': 1686232494.9841135, 'levon': {'account_name': 'Guest'}},), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:54,987 - DEBUG      - server     - Была вызвана функция "send_message" c параметрами (<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 32962)>, {'response': 200}), {}. Вызов из модуля "utils".Вызов из функции server 
-2023-06-08 16:54:54,987 - DEBUG      - server     - Запрос от клиента ('127.0.0.1', 32962):
- {'action': 'presence', 'time': 1686232494.9841135, 'levon': {'account_name': 'Guest'}}
-Код ответа клиенту: {'response': 200} 
 2023-06-08 17:04:36,162 - INFO       - server     - Сервер запущен с настройками по умолчанию!
 Адрес: 127.0.0.1 Порт: 7777
 Для ручных настроек подключения используйте аргументы командной строки:
