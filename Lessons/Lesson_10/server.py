@@ -6,11 +6,11 @@ import log.server_log_config
 from log.decor_log import log
 # from utils import get_message, send_message
 # from utils import Utils
-from metaclasses import ServerMaker
+from metaclasses import ServerVerifier
 from descriptors import DescriptorAddress, DescriptorPort
 
 
-class Server(metaclass=ServerMaker):
+class Server(metaclass=ServerVerifier):
     # utils = Utils()
     serv_addr = DescriptorAddress()
     listen_port = DescriptorPort()

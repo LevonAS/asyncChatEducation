@@ -185,3 +185,9 @@ $ python server.py -a [ip-адрес] -p [порт сервера]
 2023-06-22 14:45:50,013 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>), {}. Инициатор вызова - "start_server" 
 2023-06-22 14:45:50,013 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687434349.9530513, 'account_name': 'QQQ'} 
 2023-06-22 14:45:50,014 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, {'action': 'exit', 'time': 1687434349.9530513, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:55:41,455 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f0cf72d3640>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:55:41,456 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f0cf72d3640>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:55:41,456 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7778
+Для выхода нажмите CTRL+C
+ 

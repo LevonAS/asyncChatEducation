@@ -2,7 +2,7 @@ import dis
 
 
 # Метакласс для проверки Server
-class ServerMaker(type):
+class ServerVerifier(type):
     def __init__(self, clsname, bases, dct):
         # Список для методов Server
         methods = []
@@ -30,8 +30,8 @@ class ServerMaker(type):
                             # заполняем список атрибутами, использующимися в функциях класса
                             attrs.append(i.argval)
 
-        print('// Методы модуля Server:', methods)
-        print('// Атрибуты модуля Server:', attrs)
+        # print('// Методы модуля Server:', methods)
+        # print('// Атрибуты модуля Server:', attrs)
 
         # Если обнаружено использование недопустимого метода connect, бросаем исключение:
         if 'connect' in methods:
@@ -44,7 +44,7 @@ class ServerMaker(type):
 
 
 # Метакласс для проверки корректности Client
-class ClientMaker(type):
+class ClientVerifier(type):
     def __init__(self, clsname, bases, dct):
         # Список для методов objClient
         methods = []
@@ -61,7 +61,7 @@ class ClientMaker(type):
                         if i.argval not in methods:
                             methods.append(func)
 
-        print('// Методы модуля Client:', methods)
+        # print('// Методы модуля Client:', methods)
 
         # Если обнаружено использование недопустимого метода accept, listen, socket бросаем исключение:
         for command in ('accept', 'listen'):

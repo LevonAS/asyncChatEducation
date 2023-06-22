@@ -7,10 +7,10 @@ import log.client_log_config
 from log.decor_log import log
 # from utils import send_message, get_message
 # from utils import Utils
-from metaclasses import ClientMaker
+from metaclasses import ClientVerifier
 
 
-class Client(metaclass=ClientMaker):
+class Client(metaclass=ClientVerifier):
     # utils = Utils()
 
     def __init__(self):
