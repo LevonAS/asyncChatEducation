@@ -192,15 +192,16 @@ class Client(metaclass=ClientVerifier):
 
     def connect_to_server(self, sock):
         try:
-            user_name = input('Введите имя пользователя: ')
-            self.send_message(sock, self.create_presence_message(user_name))
+            if not self.client_name:
+                self.client_name = input('Введите имя пользователя: ')
+            self.send_message(sock, self.create_presence_message(self.client_name))
             answer = self.parse_response(self.get_message(sock))
             if answer == 200:
                 self.CLIENT_LOGGER.info(f'Установлено соединение с сервером. Ответ сервера: {answer}')
                 print(f'Установлено соединение с сервером.')
-                return user_name
+                return 
             elif answer == 409:
-                print(f' Пользователь {user_name} уже подключён к серверу. '
+                print(f' Пользователь {self.client_name} уже подключён к серверу. '
                     f'Попробуте подключиться с другим именем.')
                 sys.exit(1)
                 # connect_to_server(sock)
@@ -265,8 +266,8 @@ class Client(metaclass=ClientVerifier):
         # self.s = socket(AF_INET, SOCK_STREAM)
         self.s.connect((self.serv_addr, int(self.dest_port)))
         # Если имя пользователя не было задано, необходимо запросить пользователя.
-        if not self.client_name:
-            self.client_name = self.connect_to_server(self.s)
+        # if not self.client_name:
+        self.connect_to_server(self.s)
      
         # Если соединение с сервером установлено корректно,
         # запускаем клиенский процесс приёма сообщний
