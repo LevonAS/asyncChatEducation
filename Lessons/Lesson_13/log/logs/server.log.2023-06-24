@@ -1,0 +1,338 @@
+2023-06-22 12:48:13,495 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 12:51:04,100 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 12:51:29,276 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 12:52:57,514 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 12:53:37,045 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 12:53:47,702 - CRITICAL   - server     - В качастве порта может быть указано только число в диапазоне от 1024 до 65535. 
+2023-06-22 13:19:50,268 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 13:22:05,514 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 56766) 
+2023-06-22 13:22:08,127 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fc5f30c5ea0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:22:08,128 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687429328.0079603, 'levon': {'account_name': 'ЙЙЙ'}} 
+2023-06-22 13:22:08,128 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7fc5f30c5ea0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 13:22:08,128 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fc5f30c5ea0>, {'action': 'presence', 'time': 1687429328.0079603, 'levon': {'account_name': 'ЙЙЙ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>], {'ЙЙЙ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:22:11,138 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fc5f30c5ea0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 56766)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:22:11,138 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687429331.013719, 'account_name': 'ЙЙЙ'} 
+2023-06-22 13:22:11,138 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fc5f30c5ea0>, {'action': 'exit', 'time': 1687429331.013719, 'account_name': 'ЙЙЙ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:24:35,037 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 13:42:19,647 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 42400) 
+2023-06-22 13:42:21,658 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:42:21,658 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687430541.462382, 'levon': {'account_name': 'ЙЙЙ'}} 
+2023-06-22 13:42:21,658 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 13:42:21,658 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'presence', 'time': 1687430541.462382, 'levon': {'account_name': 'ЙЙЙ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>], {'ЙЙЙ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:42:24,871 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 42400)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:42:24,871 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687430544.7984216, 'account_name': 'ЙЙЙ'} 
+2023-06-22 13:42:24,871 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'exit', 'time': 1687430544.7984216, 'account_name': 'ЙЙЙ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:43:08,541 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 57974) 
+2023-06-22 13:43:10,345 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:43:10,345 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687430590.1747248, 'levon': {'account_name': 'WWW'}} 
+2023-06-22 13:43:10,346 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 13:43:10,346 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'presence', 'time': 1687430590.1747248, 'levon': {'account_name': 'WWW'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>], {'WWW': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:43:12,350 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57974)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:43:12,351 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687430592.2873724, 'account_name': 'WWW'} 
+2023-06-22 13:43:12,351 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'exit', 'time': 1687430592.2873724, 'account_name': 'WWW'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:50:20,280 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 57150) 
+2023-06-22 13:50:22,687 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:50:22,687 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687431022.6514275, 'levon': {'account_name': 'QQQ'}} 
+2023-06-22 13:50:22,687 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 13:50:22,688 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'presence', 'time': 1687431022.6514275, 'levon': {'account_name': 'QQQ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:50:28,108 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57150)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:50:28,108 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687431028.080491, 'account_name': 'QQQ'} 
+2023-06-22 13:50:28,108 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'exit', 'time': 1687431028.080491, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:51:55,289 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 37300) 
+2023-06-22 13:51:58,907 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:51:58,907 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687431118.757945, 'levon': {'account_name': 'QQQ'}} 
+2023-06-22 13:51:58,907 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 13:51:58,907 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'presence', 'time': 1687431118.757945, 'levon': {'account_name': 'QQQ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:52:01,720 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f516767f040>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 37300)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:52:01,721 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687431121.6521783, 'account_name': 'QQQ'} 
+2023-06-22 13:52:01,721 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f516767f040>, {'action': 'exit', 'time': 1687431121.6521783, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 13:52:48,771 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 13:53:07,685 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 13:53:19,079 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:10:44,355 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:13:03,537 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:15:02,802 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:15:11,518 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 77778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:19:58,027 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 77778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:20:01,655 - INFO       - server     - Консольный месседжер. Серверный модуль запущен с ручными настройками.
+Адрес: 127.0.0.1 Порт: 77778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:32:58,275 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f4d2dab3f40>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:32:58,275 - CRITICAL   - descriptors - !!!Попытка запуска сервера с указанием неподходящего порта 77778. Допустимы адреса с 1024 до 65535. 
+2023-06-22 14:32:58,275 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f4d2dab3f40>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:32:58,276 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:33:48,813 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f1f35923f40>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:33:48,813 - CRITICAL   - descriptors - !!!Попытка запуска сервера с указанием неподходящего порта 77778. Допустимы адреса с 1024 до 65535. 
+2023-06-22 14:33:48,813 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f1f35923f40>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:33:48,813 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.9 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:34:31,952 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f85a1c5ff40>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:34:31,953 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f85a1c5ff40>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:34:31,953 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.9 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:34:39,072 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f12775fff40>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:34:39,073 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f12775fff40>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:34:39,073 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.9 Порт: 7778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:40:20,776 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f7816333ee0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:40:20,776 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f7816333ee0>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:40:20,776 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес:  Порт: 7778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:41:26,851 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fe71dceff10>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:41:26,851 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7fe71dceff10>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:41:26,851 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:42:15,347 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fee5559f640>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:42:15,347 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7fee5559f640>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:42:15,347 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7778
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:42:53,178 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fa0b96200d0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:42:53,178 - CRITICAL   - descriptors - !!!Попытка запуска сервера с указанием неподходящего порта 77887. Допустимы адреса с 1024 до 65535. 
+2023-06-22 14:42:53,178 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7fa0b96200d0>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:42:53,179 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-22 14:43:10,002 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 45016) 
+2023-06-22 14:43:14,215 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:43:14,215 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687434194.1500435, 'levon': {'account_name': 'QQQ'}} 
+2023-06-22 14:43:14,215 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 14:43:14,215 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, {'action': 'presence', 'time': 1687434194.1500435, 'levon': {'account_name': 'QQQ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:43:17,024 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45016)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:43:17,024 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687434196.9466746, 'account_name': 'QQQ'} 
+2023-06-22 14:43:17,024 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, {'action': 'exit', 'time': 1687434196.9466746, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:44:46,178 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 46916) 
+2023-06-22 14:44:49,388 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:44:49,388 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687434289.3711305, 'levon': {'account_name': 'QQQ'}} 
+2023-06-22 14:44:49,388 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-22 14:44:49,388 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, {'action': 'presence', 'time': 1687434289.3711305, 'levon': {'account_name': 'QQQ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>}), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:45:50,013 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 46916)>), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:45:50,013 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687434349.9530513, 'account_name': 'QQQ'} 
+2023-06-22 14:45:50,014 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7fa0b96200d0>, {'action': 'exit', 'time': 1687434349.9530513, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:55:41,455 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f0cf72d3640>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-22 14:55:41,456 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f0cf72d3640>,), {}. Инициатор вызова - "start_server" 
+2023-06-22 14:55:41,456 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7778
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:22:25,775 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fbbfe314490>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:22:25,776 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7fbbfe314490>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:22:25,776 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:22:47,023 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7ff85a9280d0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:22:47,024 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7ff85a9280d0>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:22:47,024 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7774
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:23:03,281 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f5fd76400d0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:23:03,281 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего порта 777433. Допустимы адреса с 1024 до 65535./D/!!!Порту принудительно присвоено значение по-умочанию: 7777 
+2023-06-24 13:23:03,281 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f5fd76400d0>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:23:03,281 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:24:09,143 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f3c25fb6c20>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:24:09,143 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего порта 777433. Допустимы адреса с 1024 до 65535.
+/D/!!!Порту принудительно присвоено значение по-умолчанию: 7777 
+2023-06-24 13:24:09,143 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f3c25fb6c20>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:24:09,144 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:25:15,453 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f9d9469ec20>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:25:15,454 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего порта 777433. Допустимы адреса с 1024 до 65535.
+/D/!!!Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 13:25:15,455 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f9d9469ec20>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:25:15,455 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:25:49,704 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f693e35c0d0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:25:49,704 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего порта 777433. Допустимы адреса с 1024 до 65535.
+/D/!!!Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 13:25:49,705 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f693e35c0d0>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:25:49,705 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:26:54,809 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7ff2eb7c6c20>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:26:54,809 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 777433. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 13:26:54,810 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7ff2eb7c6c20>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:26:54,810 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:39:22,054 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f0c31eaa920>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:39:22,055 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 777433. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 13:39:22,056 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f0c31eaa920>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:39:22,056 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:40:31,505 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fe67da7ff40>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:40:31,506 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 777433. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 13:40:31,506 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7fe67da7ff40>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 13:40:31,506 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 13:40:52,220 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f25ceea3fa0>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:40:52,220 - CRITICAL   - utils      - /D/!!!Для сервера указан не корректный ip-адрес: 127.0.0.1111 
+2023-06-24 13:42:32,901 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7fc7c1875a80>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 13:42:32,902 - CRITICAL   - utils      - /D/!!!При запуске указан не корректный ip-адрес: 127.0.0.1111 
+2023-06-24 14:17:29,494 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f68cc478130>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 14:17:29,495 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 77887. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 14:17:29,495 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f68cc478130>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:17:29,495 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 14:19:11,592 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 40898) 
+2023-06-24 14:19:14,603 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:14,603 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687605554.436717, 'levon': {'account_name': 'QQQ'}} 
+2023-06-24 14:19:14,603 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:19:14,604 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'presence', 'time': 1687605554.436717, 'levon': {'account_name': 'QQQ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:21,027 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:21,028 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'getulist', 'time': 1687605560.8269868, 'levon': 'QQQ'} 
+2023-06-24 14:19:21,028 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>, {'action': 'getulist', 'users_list': 'QQQ'}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:19:21,028 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'getulist', 'time': 1687605560.8269868, 'levon': 'QQQ'}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>], {'QQQ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:23,438 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 40898)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:23,438 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687605563.3072748, 'account_name': 'QQQ'} 
+2023-06-24 14:19:23,438 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'exit', 'time': 1687605563.3072748, 'account_name': 'QQQ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:36,559 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 59170) 
+2023-06-24 14:19:56,027 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:56,027 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687605595.8497028, 'levon': {'account_name': 'WWW'}} 
+2023-06-24 14:19:56,027 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:19:56,028 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'presence', 'time': 1687605595.8497028, 'levon': {'account_name': 'WWW'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>], {'WWW': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:59,239 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 59170)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:19:59,239 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687605599.1133575, 'account_name': 'WWW'} 
+2023-06-24 14:19:59,240 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'exit', 'time': 1687605599.1133575, 'account_name': 'WWW'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:20:46,671 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 43742) 
+2023-06-24 14:21:01,519 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:21:01,519 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687605661.350942, 'levon': {'account_name': 'SSS'}} 
+2023-06-24 14:21:01,520 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:21:01,520 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'presence', 'time': 1687605661.350942, 'levon': {'account_name': 'SSS'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>], {'SSS': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:21:03,929 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 43742)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:21:03,929 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687605663.8532686, 'account_name': 'SSS'} 
+2023-06-24 14:21:03,929 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'exit', 'time': 1687605663.8532686, 'account_name': 'SSS'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:07,032 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 35026) 
+2023-06-24 14:22:14,458 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:14,458 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687605734.278457, 'levon': {'account_name': 'ВВВ'}} 
+2023-06-24 14:22:14,458 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:22:14,458 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'presence', 'time': 1687605734.278457, 'levon': {'account_name': 'ВВВ'}}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>], {'ВВВ': <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:19,279 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 35026)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:19,279 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687605739.2764826, 'account_name': 'ВВВ'} 
+2023-06-24 14:22:19,279 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'exit', 'time': 1687605739.2764826, 'account_name': 'ВВВ'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:26,464 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 57090) 
+2023-06-24 14:22:59,581 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57090)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:22:59,581 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'getulist', 'time': 1687605779.5771966, 'levon': 'FFF'} 
+2023-06-24 14:22:59,581 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "send_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57090)>, {'action': 'getulist', 'users_list': ''}), {}. Инициатор вызова - "process_client_message" 
+2023-06-24 14:22:59,581 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, {'action': 'getulist', 'time': 1687605779.5771966, 'levon': 'FFF'}, [], <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57090)>, [<socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57090)>], {}), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:23:06,406 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_message" c параметрами (<__main__.Server object at 0x7f68cc478130>, <socket.socket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 57090)>), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:23:06,406 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687605786.398616, 'account_name': 'FFF'} 
+2023-06-24 14:23:06,406 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 57090) отключился от сервера. 
+2023-06-24 14:24:14,516 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f22be894130>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 14:24:14,516 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 77887. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 14:24:14,517 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f22be894130>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:24:14,517 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 14:24:22,744 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f8b7075c100>,), {}. Инициатор вызова - "get_addr_port" 
+2023-06-24 14:24:22,744 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_addr_port" c параметрами (<__main__.Server object at 0x7f8b7075c100>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 14:24:22,744 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 23:19:36,102 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f6af8164520>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 23:19:36,102 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 23:19:58,770 - CRITICAL   - utils      - /D/!!!Попытка запуска с указанием неподходящего значения порта 77789. Допустимы адреса с 1024 до 65535. Порту принудительно присвоено значение по умолчанию: 7777 
+2023-06-24 23:19:58,780 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "get_args_parser" c параметрами (<__main__.Server object at 0x7f8c6c734520>,), {}. Инициатор вызова - "start_server" 
+2023-06-24 23:19:58,780 - INFO       - server     - Консольный месседжер. Серверный модуль запущен.
+Адрес: 127.0.0.1 Порт: 7777
+Для выхода нажмите CTRL+C
+ 
+2023-06-24 23:20:30,383 - CRITICAL   - utils      - /D/!!!При запуске указан некорректный ip-адрес: 127.0.0.112121 
+2023-06-24 23:20:38,122 - CRITICAL   - utils      - /D/!!!При запуске указан некорректный ip-адрес: 127.0.0.112121 
