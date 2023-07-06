@@ -1,0 +1,49 @@
+2023-06-17 21:41:42,658 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-17 21:41:42,685 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 53436) 
+2023-06-17 21:41:42,696 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 53438) 
+2023-06-17 21:41:42,699 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 53442) 
+2023-06-17 21:41:42,730 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 53458) 
+2023-06-17 21:41:42,745 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 53468) 
+2023-06-17 21:41:56,195 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 53468) отключился от сервера. 
+2023-06-17 21:41:56,797 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 53442) отключился от сервера. 
+2023-06-17 21:41:57,199 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 53458) отключился от сервера. 
+2023-06-17 21:41:57,801 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 53436) отключился от сервера. 
+2023-06-17 21:41:58,806 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 53438) отключился от сервера. 
+2023-06-17 21:44:39,239 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-17 21:44:39,368 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 39014) 
+2023-06-17 21:44:39,374 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 39016) 
+2023-06-17 21:45:00,251 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 39014) отключился от сервера. 
+2023-06-17 21:45:00,653 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 39016) отключился от сервера. 
+2023-06-17 22:14:34,427 - INFO       - server     - Сервер запущен с настройками по умолчанию!
+Адрес: 127.0.0.1 Порт: 7777
+Для ручных настроек подключения используйте аргументы командной строки:
+$ python server.py -a [ip-адрес] -p [порт сервера]
+
+Для выхода нажмите CTRL+C
+ 
+2023-06-17 22:15:39,175 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 59998) 
+2023-06-17 22:15:41,784 - INFO       - server     - Отправляющий клиент ('127.0.0.1', 59998) отключился от сервера. 
+2023-06-17 22:16:32,698 - INFO       - server     - Получен запрос на соединение от ('127.0.0.1', 45104) 
+2023-06-17 22:16:34,707 - DEBUG      - server     - Из модуля "utils" была вызвана функция "get_message" c параметрами (<utils.Utils object at 0x7fb75275bfd0>, <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>), {}. Инициатор вызова - "server" 
+2023-06-17 22:16:34,707 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'presence', 'time': 1687029394.5331743, 'levon': {'account_name': 'WWWW'}} 
+2023-06-17 22:16:34,708 - DEBUG      - server     - Из модуля "utils" была вызвана функция "send_message" c параметрами (<utils.Utils object at 0x7fb75275bfd0>, <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>, {'response': 200}), {}. Инициатор вызова - "process_client_message" 
+2023-06-17 22:16:34,708 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами ({'action': 'presence', 'time': 1687029394.5331743, 'levon': {'account_name': 'WWWW'}}, [], <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>, [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>], {'WWWW': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>}), {}. Инициатор вызова - "server" 
+2023-06-17 22:16:41,737 - DEBUG      - server     - Из модуля "utils" была вызвана функция "get_message" c параметрами (<utils.Utils object at 0x7fb75275bfd0>, <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>), {}. Инициатор вызова - "server" 
+2023-06-17 22:16:41,737 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'getulist', 'time': 1687029401.6924222, 'levon': 'WWWW'} 
+2023-06-17 22:16:41,737 - DEBUG      - server     - Из модуля "utils" была вызвана функция "send_message" c параметрами (<utils.Utils object at 0x7fb75275bfd0>, <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>, {'action': 'getulist', 'users_list': 'WWWW'}), {}. Инициатор вызова - "process_client_message" 
+2023-06-17 22:16:41,737 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами ({'action': 'getulist', 'time': 1687029401.6924222, 'levon': 'WWWW'}, [], <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>, [<socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>], {'WWWW': <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>}), {}. Инициатор вызова - "server" 
+2023-06-17 22:16:45,350 - DEBUG      - server     - Из модуля "utils" была вызвана функция "get_message" c параметрами (<utils.Utils object at 0x7fb75275bfd0>, <socket.socket fd=6, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 7777), raddr=('127.0.0.1', 45104)>), {}. Инициатор вызова - "server" 
+2023-06-17 22:16:45,350 - DEBUG      - server     - Разбор сообщения от клиента : {'action': 'exit', 'time': 1687029405.2890983, 'account_name': 'WWWW'} 
+2023-06-17 22:16:45,351 - DEBUG      - server     - Из модуля "__main__" была вызвана функция "process_client_message" c параметрами ({'action': 'exit', 'time': 1687029405.2890983, 'account_name': 'WWWW'}, [], <socket.socket [closed] fd=-1, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0>, [], {}), {}. Инициатор вызова - "server" 
