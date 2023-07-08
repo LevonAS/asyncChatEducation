@@ -17,7 +17,8 @@ while True:
         #                                     shell=True))
         # Запускаем клиентов:
         for i in range(4):
-            PROCESS.append(subprocess.Popen(f'mate-terminal -- python client_run.py -n usertest{i + 1}',  shell=True))
+            PROCESS.append(subprocess.Popen(f'mate-terminal -- python client_run.py',  shell=True))
+            # PROCESS.append(subprocess.Popen(f'mate-terminal -- python client_run.py -n usertest{i + 1}',  shell=True))
         # PROCESS.append(subprocess.Popen(f'mate-terminal -- python ./client/client.py -n usertest1',  shell=True))
         # print("PROCESS List", PROCESS)
     elif ACTION == 'x':
