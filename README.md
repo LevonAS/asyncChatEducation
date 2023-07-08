@@ -9,6 +9,8 @@
 - GitPython-3.1.31 bandit-1.7.5 gitdb-4.0.10 markdown-it-py-3.0.0 mdurl-0.1.2 pbr-5.11.1 pygments-2.15.1 rich-13.4.2 smmap-5.0.0 stevedore-5.1.0;
 - pycryptodome-3.18.0;
 - pycryptodomex-3.18.0;
+- wheel-0.40.0;
+- cx_Freeze-6.15.3 patchelf-0.17.2.1 setuptools-68.0.0;
 - tabulate-0.9.0;
 - python 3.10.6;
 - vUbuntu Server 22_04.
