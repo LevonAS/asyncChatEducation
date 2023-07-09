@@ -343,8 +343,8 @@ class Client(threading.Thread, QObject):
         CLIENT_LOGGER.debug('Транспорт завершает работу.')
         time.sleep(0.5)
 
-    # Функция отправки сообщения на сервер
     def send_data(self, to, message):
+        '''Метод отправки сообщения пользователю на сервер.'''
         message_dict = {
             os.getenv('ACTION'): os.getenv('MESSAGE'),
             os.getenv('SENDER'): self.username,
@@ -394,11 +394,6 @@ class Client(threading.Thread, QObject):
                 CLIENT_LOGGER.debug(f'Принято сообщение с сервера: {message}')
                 print("/\/CLN_run_3", "message:", message)
                 self.process_server_ans(message)
-
-
-"""
-##########################################################################
-"""
 
 
 @log

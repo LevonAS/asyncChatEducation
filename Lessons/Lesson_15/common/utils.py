@@ -49,9 +49,7 @@ class Utils():
 
 
 class DescriptorAddress:
-    """
-    Проверяет ip адрес, если он указан в параметрах
-    """
+    """ Проверяет ip адрес, если он указан в параметрах """
 
     def __set_name__(self, owner, name):
         self.name = name
@@ -91,8 +89,8 @@ class DescriptorPort:
             instance.__dict__[self.name] = value
 
 
-# Метакласс для проверки модуля Server
 class ServerVerifier(type):
+    """ Метакласс для проверки модуля Server """
     def __init__(self, clsname, bases, dct):
         # clsname - ссылка на экземпляр Server
         # bases - кортеж базовых классов для Server - ()
@@ -141,8 +139,8 @@ class ServerVerifier(type):
         super().__init__(clsname, bases, dct)
 
 
-# Метакласс для проверки корректности модуля Client
 class ClientVerifier(type):
+    """ Метакласс для проверки корректности модуля Client """
     def __init__(self, clsname, bases, dct):
         # Список для методов objClient
         methods = []

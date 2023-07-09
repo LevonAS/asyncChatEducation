@@ -23,6 +23,11 @@ from common.utils import DescriptorAddress, DescriptorPort, ServerVerifier
 
 
 class Server(threading.Thread, metaclass=ServerVerifier):
+    '''
+    Основной класс сервера. Принимает содинения, словари - 
+    пакеты от клиентов, обрабатывает поступающие сообщения.
+    Работает в качестве отдельного потока.
+    '''
 
     serv_addr = DescriptorAddress()
     listen_port = DescriptorPort()
