@@ -1,6 +1,9 @@
 """Декораторы"""
 
-import sys, logging, traceback, inspect
+import sys
+import logging
+import traceback
+import inspect
 from functools import wraps
 # sys.path.append('../')
 
@@ -30,21 +33,20 @@ def log(func_to_log):
     return log_saver
 
 
-
 def go():
     print("!!go!!!go!!!!")
-
 
 
 # Реализация в виде класса
 class Log:
     """Класс-декоратор"""
+
     def __call__(self, func_to_log):
         def log_saver(*args, **kwargs):
             """Обертка"""
             ret = func_to_log(*args, **kwargs)
             LOGGER.debug(f'Из модуля "{func_to_log.__module__}" '
-                        f'была вызвана функция "{func_to_log.__name__}" c параметрами {args}, {kwargs}. '
-                        f'Инициатор вызова - "{inspect.stack()[1][3]}"', stacklevel=2)
+                         f'была вызвана функция "{func_to_log.__name__}" c параметрами {args}, {kwargs}. '
+                         f'Инициатор вызова - "{inspect.stack()[1][3]}"', stacklevel=2)
             return ret
         return log_saver

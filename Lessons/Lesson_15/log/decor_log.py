@@ -1,6 +1,10 @@
 """Декораторы"""
 
-import sys, logging, traceback, inspect, socket
+import sys
+import logging
+import traceback
+import inspect
+import socket
 from functools import wraps
 # from dotenv import load_dotenv
 # sys.path.append('../')
@@ -31,10 +35,8 @@ def log(func_to_log):
     return log_saver
 
 
-
 def go():
     print("!!go!!!go!!!!")
-
 
 
 # Реализация в виде класса
@@ -62,7 +64,7 @@ def login_required(func):
 
     def checker(*args, **kwargs):
         # load_dotenv()
-        
+
         # проверяем, что первый аргумент - экземпляр MessageProcessor
         # Импортить необходимо тут, иначе ошибка рекурсивного импорта.
         from server_run import Server

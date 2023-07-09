@@ -32,7 +32,7 @@ class RegisterUser(QDialog):
         self.client_passwd.setFixedSize(200, 20)
         self.client_passwd.move(10, 75)
         self.client_passwd.setEchoMode(QLineEdit.Password)
-        
+
         self.label_conf = QLabel('Введите подтверждение:', self)
         self.label_conf.move(10, 100)
         self.label_conf.setFixedSize(250, 15)
@@ -91,5 +91,3 @@ if __name__ == '__main__':
     app.setAttribute(Qt.AA_DisableWindowContextHelpButton)
     dial = RegisterUser(None)
     app.exec_()
-
-    

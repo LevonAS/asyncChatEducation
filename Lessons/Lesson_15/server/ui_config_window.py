@@ -125,4 +125,3 @@ class ConfigWindow(QDialog):
             else:
                 message.warning(
                     self, 'Ошибка', 'Порт должен быть от 1024 до 65536')
-

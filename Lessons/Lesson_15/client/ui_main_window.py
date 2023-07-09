@@ -101,7 +101,8 @@ class Ui_MainClientWindow(object):
         self.btn_smile_1.setGeometry(QtCore.QRect(300, 440, 36, 36))
         self.btn_smile_1.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("./client/icons/biaoqing_008.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap("./client/icons/biaoqing_008.png"),
+                       QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_smile_1.setIcon(icon)
         self.btn_smile_1.setIconSize(QtCore.QSize(32, 32))
         self.btn_smile_1.setObjectName("btn_smile_1")
@@ -109,7 +110,8 @@ class Ui_MainClientWindow(object):
         self.btn_smile_2.setGeometry(QtCore.QRect(340, 440, 36, 36))
         self.btn_smile_2.setText("")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("./client/icons/biaoqing_009.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(
+            "./client/icons/biaoqing_009.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_smile_2.setIcon(icon1)
         self.btn_smile_2.setIconSize(QtCore.QSize(32, 32))
         self.btn_smile_2.setObjectName("btn_smile_2")
@@ -117,7 +119,8 @@ class Ui_MainClientWindow(object):
         self.btn_smile_3.setGeometry(QtCore.QRect(300, 480, 36, 36))
         self.btn_smile_3.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("./client/icons/biaoqing_014.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(
+            "./client/icons/biaoqing_014.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_smile_3.setIcon(icon2)
         self.btn_smile_3.setIconSize(QtCore.QSize(32, 32))
         self.btn_smile_3.setObjectName("btn_smile_3")
@@ -125,7 +128,8 @@ class Ui_MainClientWindow(object):
         self.btn_smile_4.setGeometry(QtCore.QRect(340, 480, 36, 36))
         self.btn_smile_4.setText("")
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("./client/icons/biaoqing_018.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(
+            "./client/icons/biaoqing_018.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.btn_smile_4.setIcon(icon3)
         self.btn_smile_4.setIconSize(QtCore.QSize(32, 32))
         self.btn_smile_4.setObjectName("btn_smile_4")
@@ -155,21 +159,30 @@ class Ui_MainClientWindow(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(MainClientWindow)
-        self.btn_clear.clicked.connect(self.text_message.clear) # type: ignore
+        self.btn_clear.clicked.connect(self.text_message.clear)  # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainClientWindow)
 
     def retranslateUi(self, MainClientWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainClientWindow.setWindowTitle(_translate("MainClientWindow", "Чат Программа Auuu"))
-        self.label_contacts.setText(_translate("MainClientWindow", "Список контактов:"))
-        self.btn_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
-        self.btn_remove_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
-        self.label_history.setText(_translate("MainClientWindow", "История сообщений:"))
-        self.label_new_message.setText(_translate("MainClientWindow", "Введите новое сообщение:"))
-        self.btn_send.setText(_translate("MainClientWindow", "Отправить сообщение"))
+        MainClientWindow.setWindowTitle(_translate(
+            "MainClientWindow", "Чат Программа Auuu"))
+        self.label_contacts.setText(_translate(
+            "MainClientWindow", "Список контактов:"))
+        self.btn_add_contact.setText(_translate(
+            "MainClientWindow", "Добавить контакт"))
+        self.btn_remove_contact.setText(_translate(
+            "MainClientWindow", "Удалить контакт"))
+        self.label_history.setText(_translate(
+            "MainClientWindow", "История сообщений:"))
+        self.label_new_message.setText(_translate(
+            "MainClientWindow", "Введите новое сообщение:"))
+        self.btn_send.setText(_translate(
+            "MainClientWindow", "Отправить сообщение"))
         self.btn_clear.setText(_translate("MainClientWindow", "Очистить поле"))
         self.menu.setTitle(_translate("MainClientWindow", "Файл"))
         self.menu_2.setTitle(_translate("MainClientWindow", "Контакты"))
         self.menu_exit.setText(_translate("MainClientWindow", "Выход"))
-        self.menu_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
-        self.menu_del_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
+        self.menu_add_contact.setText(_translate(
+            "MainClientWindow", "Добавить контакт"))
+        self.menu_del_contact.setText(_translate(
+            "MainClientWindow", "Удалить контакт"))

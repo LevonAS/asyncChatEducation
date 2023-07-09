@@ -1,6 +1,15 @@
-import os, sys, json, time, threading, argparse, socket, hashlib, hmac, binascii
+import os
+import sys
+import json
+import time
+import threading
+import argparse
+import socket
+import hashlib
+import hmac
+import binascii
 from dotenv import load_dotenv
-from datetime import datetime 
+from datetime import datetime
 from Cryptodome.PublicKey import RSA
 from PyQt5.QtWidgets import QApplication, QMessageBox
 from PyQt5.QtCore import pyqtSignal, QObject
@@ -9,10 +18,8 @@ import logging
 project_directory = os.getcwd()
 sys.path.append(project_directory)
 # print("///CLN_000",project_directory)
-
 import log.client_log_config
-from log.decor_log import go, log
-
+from log.decor_log import log
 from common.utils import ClientVerifier
 from common.errors import IncorrectDataRecivedError, ReqFieldMissingError, ServerError
 from client.ui_start_dialog import UserNameDialog
@@ -20,7 +27,7 @@ from client.client_database import ClientDatabase
 from client.client_main_window import ClientMainWindow
 
 
-# database_lock = threading.Lock()
+
 
 CLIENT_LOGGER = logging.getLogger('client')
 socket_lock = threading.Lock()
@@ -61,7 +68,8 @@ class Client(threading.Thread, QObject):
             if err.errno:
                 CLIENT_LOGGER.critical(f'Потеряно соединение с сервером.')
                 raise ServerError('Потеряно соединение с сервером!')
-            CLIENT_LOGGER.error('Timeout соединения при обновлении списков пользователей.')
+            CLIENT_LOGGER.error(
+                'Timeout соединения при обновлении списков пользователей.')
         except json.JSONDecodeError:
             CLIENT_LOGGER.critical(f'Потеряно соединение с сервером.')
             raise ServerError('Потеряно соединение с сервером!')
@@ -92,10 +100,12 @@ class Client(threading.Thread, QObject):
 
         # Если соединится не удалось - исключение
         if not connected:
-            CLIENT_LOGGER.critical('Не удалось установить соединение с сервером')
+            CLIENT_LOGGER.critical(
+                'Не удалось установить соединение с сервером')
             raise ServerError('Не удалось установить соединение с сервером')
 
-        CLIENT_LOGGER.debug('Установлено соединение с сервером, запускаем авторизацию')
+        CLIENT_LOGGER.debug(
+            'Установлено соединение с сервером, запускаем авторизацию')
 
         # Запускаем процедуру авторизации
         # Получаем хэш пароля
@@ -133,10 +143,11 @@ class Client(threading.Thread, QObject):
                         # Если всё нормально, то продолжаем процедуру
                         # авторизации.
                         ans_data = ans[os.getenv('DATA')]
-                        hash = hmac.new(passwd_hash_string, ans_data.encode('utf-8'), 'MD5')
+                        hash = hmac.new(passwd_hash_string,
+                                        ans_data.encode('utf-8'), 'MD5')
                         digest = hash.digest()
                         my_ans = {
-                            os.getenv('RESPONSE'): 511, 
+                            os.getenv('RESPONSE'): 511,
                             os.getenv('DATA'): None
                         }
                         my_ans[os.getenv('DATA')] = binascii.b2a_base64(
@@ -146,7 +157,6 @@ class Client(threading.Thread, QObject):
             except (OSError, json.JSONDecodeError) as err:
                 CLIENT_LOGGER.debug(f'Connection error.', exc_info=err)
                 raise ServerError('Сбой соединения в процессе авторизации.')
-
 
     @log
     def send_message(self, open_socket, message):
@@ -158,13 +168,13 @@ class Client(threading.Thread, QObject):
         :return: ничего не возвращает
         '''
         js_message = json.dumps(message)
-        print("///CLN__SM_1", "[message:]", message, \
-            "\n[js_message:]", js_message, "\n")
+        print("///CLN__SM_1", "[message:]", message,
+              "\n[js_message:]", js_message, "\n")
         encoded_message = js_message.encode(os.getenv('ENCODING'))
         open_socket.send(encoded_message)
-        print("///CLN__SM_2", "[message:]", message, \
-            "\n[encoded_message:]", encoded_message, \
-                "\n[open_socket:]", open_socket, "\n")
+        print("///CLN__SM_2", "[message:]", message,
+              "\n[encoded_message:]", encoded_message,
+              "\n[open_socket:]", open_socket, "\n")
 
     @log
     def get_message(self, client):
@@ -184,9 +194,9 @@ class Client(threading.Thread, QObject):
             return response_dict
         else:
             raise TypeError
-    
-    
+
     # Функция, генерирующая приветственное сообщение для сервера
+
     def create_presence(self):
         """Метод генерирует запрос о присутствии клиента"""
         message = {
@@ -219,7 +229,6 @@ class Client(threading.Thread, QObject):
                 CLIENT_LOGGER.debug(
                     f"Принят неизвестный код подтверждения {message[os.getenv('RESPONSE')]}")
 
-
         # Если это сообщение от пользователя добавляем в базу, даём сигнал о
         # новом сообщении
         elif os.getenv('ACTION') in message \
@@ -228,16 +237,19 @@ class Client(threading.Thread, QObject):
                 and os.getenv('DESTINATION') in message \
                 and os.getenv('MESSAGE_TEXT') in message \
                 and message[os.getenv('DESTINATION')] == self.username:
-            print("/\/CLN_psa_2", "message:", message[os.getenv('MESSAGE_TEXT')])
-            CLIENT_LOGGER.debug(f"Получено сообщение от пользователя {message[os.getenv('SENDER')]}:{message[os.getenv('MESSAGE_TEXT')]}")
+            print("/\/CLN_psa_2", "message:",
+                  message[os.getenv('MESSAGE_TEXT')])
+            CLIENT_LOGGER.debug(
+                f"Получено сообщение от пользователя {message[os.getenv('SENDER')]}:{message[os.getenv('MESSAGE_TEXT')]}")
             self.new_message.emit(message)
-            print("/\/CLN_psa_3", "message:", message[os.getenv('MESSAGE_TEXT')])
-
+            print("/\/CLN_psa_3", "message:",
+                  message[os.getenv('MESSAGE_TEXT')])
 
     def contacts_list_update(self):
         '''Метод обновляющий с сервера список контактов.'''
         self.database.contacts_clear()
-        CLIENT_LOGGER.debug(f'Запрос контакт листа для пользователся {self.username}')
+        CLIENT_LOGGER.debug(
+            f'Запрос контакт листа для пользователся {self.username}')
         req = {
             os.getenv('ACTION'): os.getenv('GET_CONTACTS'),
             os.getenv('TIME'): time.time(),
@@ -257,7 +269,8 @@ class Client(threading.Thread, QObject):
     def user_list_update(self):
         '''Метод обновляющий с сервера список пользователей.'''
         print("///CLN_ulu_1", self.username)
-        CLIENT_LOGGER.debug(f'Запрос списка известных пользователей {self.username}')
+        CLIENT_LOGGER.debug(
+            f'Запрос списка известных пользователей {self.username}')
         req = {
             os.getenv('ACTION'): os.getenv('USERS_REQUEST'),
             os.getenv('TIME'): time.time(),
@@ -269,8 +282,9 @@ class Client(threading.Thread, QObject):
         if os.getenv('RESPONSE') in ans and ans[os.getenv('RESPONSE')] == 202:
             self.database.add_users(ans[os.getenv('LIST_INFO')])
         else:
-            CLIENT_LOGGER.error('Не удалось обновить список известных пользователей.')
-    
+            CLIENT_LOGGER.error(
+                'Не удалось обновить список известных пользователей.')
+
     def key_request(self, user):
         '''Метод запрашивающий с сервера публичный ключ пользователя.'''
         CLIENT_LOGGER.debug(f'Запрос публичного ключа для {user}')
@@ -286,7 +300,6 @@ class Client(threading.Thread, QObject):
             return ans[os.getenv('DATA')]
         else:
             CLIENT_LOGGER.error(f'Не удалось получить ключ собеседника{user}.')
-
 
     def add_contact(self, contact):
         '''Метод отправляющий на сервер сведения о добавлении контакта.'''
@@ -347,7 +360,6 @@ class Client(threading.Thread, QObject):
             self.process_server_ans(self.get_message(self.s))
             CLIENT_LOGGER.info(f'Отправлено сообщение для пользователя {to}')
 
-   
     def run(self):
         '''Основной цикл работы транспортного потока.'''
         print("/\/CLN_run_1", "message:")
@@ -365,7 +377,8 @@ class Client(threading.Thread, QObject):
                     message = self.get_message(self.s)
                 except OSError as err:
                     if err.errno:
-                        CLIENT_LOGGER.critical(f'Потеряно соединение с сервером.')
+                        CLIENT_LOGGER.critical(
+                            f'Потеряно соединение с сервером.')
                         self.running = False
                         self.connection_lost.emit()
                 # Проблемы с соединением
@@ -380,7 +393,7 @@ class Client(threading.Thread, QObject):
             if message:
                 CLIENT_LOGGER.debug(f'Принято сообщение с сервера: {message}')
                 print("/\/CLN_run_3", "message:", message)
-                self.process_server_ans(message)             
+                self.process_server_ans(message)
 
 
 """
@@ -396,15 +409,15 @@ def client_args_parser():
     Выполняет проверку на корректность номера порта. 
     """
     parser = argparse.ArgumentParser(description='Client script')
-    parser.add_argument('addr', default=os.getenv('DEFAULT_IP_ADDRESS'), type=str, nargs='?', \
-        help="Параметр 'addr' позволяет указать IP-адрес, с которого будут приниматься соединения. (по умолчанию адрес не указан, ")
-    parser.add_argument('port', default=os.getenv('DEFAULT_PORT'), type=int, nargs='?', \
-        help="Параметр 'port' позволяет указать порт сервера (по умолчанию 7777)")
-    parser.add_argument('-n', '--name', default=None, nargs='?', \
-        help="Параметр '-n' позволяет указать имя пользователя при запуске")
-    parser.add_argument('-p', '--password', default='', nargs='?', \
-        help="Параметр '-p' позволяет указать пароль пользователя при запуске")
-    
+    parser.add_argument('addr', default=os.getenv('DEFAULT_IP_ADDRESS'), type=str, nargs='?',
+                        help="Параметр 'addr' позволяет указать IP-адрес, с которого будут приниматься соединения. (по умолчанию адрес не указан, ")
+    parser.add_argument('port', default=os.getenv('DEFAULT_PORT'), type=int, nargs='?',
+                        help="Параметр 'port' позволяет указать порт сервера (по умолчанию 7777)")
+    parser.add_argument('-n', '--name', default=None, nargs='?',
+                        help="Параметр '-n' позволяет указать имя пользователя при запуске")
+    parser.add_argument('-p', '--password', default='', nargs='?',
+                        help="Параметр '-p' позволяет указать пароль пользователя при запуске")
+
     args = parser.parse_args(sys.argv[1:])
     serv_addr = args.addr
     serv_port = args.port
@@ -414,26 +427,26 @@ def client_args_parser():
     # проверим подходящий номер порта
     if not 1023 < serv_port < 65536:
         CLIENT_LOGGER.critical(f"Попытка запуска клиента с неподходящим номером порта удалённого сервера: {serv_port}. "
-            f"Допустимы адреса с 1024 до 65535. Клиенту будет принудительно установлен порт подключения к удалённому серверу по умолчанию : {os.getenv('DEFAULT_PORT')}")
+                               f"Допустимы адреса с 1024 до 65535. Клиенту будет принудительно установлен порт подключения к удалённому серверу по умолчанию : {os.getenv('DEFAULT_PORT')}")
         serv_port = os.getenv('DEFAULT_PORT')
-    
+
     return serv_addr, serv_port, client_name, client_passwd
 
 
 def main():
     load_dotenv()
-    
+
     # Сообщаем о запуске
     print('Запуск клиентского модуля.')
 
     # Загружаем параметы коммандной строки
-    server_address, server_port, client_name, client_passwd  = client_args_parser()
+    server_address, server_port, client_name, client_passwd = client_args_parser()
 
     # Создаём клиентокое приложение
     client_app = QApplication(sys.argv)
 
     # Если имя пользователя не было указано в командной строке то запросим его
-    
+
     if not client_name or not client_passwd:
         start_dialog = UserNameDialog()
         client_app.exec_()
@@ -442,19 +455,21 @@ def main():
         if start_dialog.ok_pressed:
             client_name = start_dialog.client_name.text()
             client_passwd = start_dialog.client_passwd.text()
-            CLIENT_LOGGER.debug(f'Using USERNAME = {client_name}, PASSWD = {client_passwd}.')
+            CLIENT_LOGGER.debug(
+                f'Using USERNAME = {client_name}, PASSWD = {client_passwd}.')
             del start_dialog
         else:
             exit(0)
     print("///CLN_main_1", client_name)
-    
+
     # Записываем логи
     CLIENT_LOGGER.info(
         f"Запущен клиент с параметрами: адрес сервера: {server_address} ,"
         f" порт: {server_port}, имя пользователя: {client_name}")
 
     # Загружаем ключи с файла, если же файла нет, то генерируем новую пару.
-    key_file = os.path.join(f'{project_directory}/client', f'priv_{client_name}.key')
+    key_file = os.path.join(
+        f'{project_directory}/client', f'priv_{client_name}.key')
     if not os.path.exists(key_file):
         keys = RSA.generate(2048, os.urandom)
         with open(key_file, 'wb') as key:
@@ -469,12 +484,13 @@ def main():
 
     # Создаём объект - транспорт и запускаем транспортный поток
     try:
-        client = Client(server_port, server_address, database, client_name, client_passwd, keys)
+        client = Client(server_port, server_address, database,
+                        client_name, client_passwd, keys)
     except ServerError as error:
         message = QMessageBox()
         message.critical('Ошибка сервера', error.text)
         exit(1)
-    
+
     client.setDaemon(True)
     client.start()
     print("///CLN_main_3", client)
@@ -497,4 +513,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

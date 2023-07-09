@@ -1,4 +1,7 @@
-import sys, os.path, logging, logging.handlers
+import sys
+import os.path
+import logging
+import logging.handlers
 
 # формировщик логов (formatter)
 FORMATTER = logging.Formatter(

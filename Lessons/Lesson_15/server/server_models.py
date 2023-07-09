@@ -44,13 +44,11 @@ class ActiveUsers(BASE):
     port = Column('port', Integer)
     login_time = Column('login_time', DateTime)
 
-
     def __init__(self, user_id, ip_address, port, login_time):
         self.user = user_id
         self.ip_address = ip_address
         self.port = port
         self.login_time = login_time
-
 
     def __repr__(self):
         return f"ActiveUsers (id={self.id}, user={self.user}, ip_address={self.ip_address},\
@@ -68,16 +66,14 @@ class LoginHistory(BASE):
     port = Column('port', Integer)
     date_time = Column('date_time', DateTime)
 
-
     def __init__(self, user_id, ip_address, port, date_time):
         self.user = user_id
         self.ip_address = ip_address
         self.port = port
         self.date_time = date_time
 
-
     def __repr__(self):
-                return f"LoginHistory (id={self.id}, user={self.user}, ip_address={self.ip_address},\
+        return f"LoginHistory (id={self.id}, user={self.user}, ip_address={self.ip_address},\
              port={self.port}, date_time={self.date_time.strftime('%Y-%m-%d %H:%M:%S')})"
 
 
@@ -115,4 +111,3 @@ class UsersHistory(BASE):
 
     def __repr__(self):
         return f"UsersHistory (id={self.id}, user={self.user}, sent={self.sent}, accepted={self.accepted}"
-

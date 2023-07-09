@@ -1,4 +1,7 @@
-import sys, logging, logging.handlers, os.path
+import sys
+import logging
+import logging.handlers
+import os.path
 
 # формировщик логов (formatter)
 FORMATTER = logging.Formatter(
@@ -16,7 +19,7 @@ STREAM_HANDLER.setFormatter(FORMATTER)
 STREAM_HANDLER.setLevel(logging.ERROR)
 
 FILE_HANDLER = logging.handlers.TimedRotatingFileHandler(
-                filename, encoding='utf8', interval=1, when='midnight')
+    filename, encoding='utf8', interval=1, when='midnight')
 FILE_HANDLER.setFormatter(FORMATTER)
 
 # регистратор

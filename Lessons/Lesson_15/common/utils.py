@@ -1,4 +1,8 @@
-import os, time, json, dis, logging
+import os
+import time
+import json
+import dis
+import logging
 from log.decor_log import log
 from ipaddress import ip_address
 
@@ -11,6 +15,7 @@ https://habr.com/ru/articles/145835/
 """
 
 SERVER_LOGGER = logging.getLogger('server')
+
 
 class Utils():
     def __init__(self):
@@ -41,12 +46,13 @@ class Utils():
                 return response_dict
             raise ValueError
         raise ValueError
-        
+
 
 class DescriptorAddress:
     """
     Проверяет ip адрес, если он указан в параметрах
     """
+
     def __set_name__(self, owner, name):
         self.name = name
 
@@ -68,6 +74,7 @@ class DescriptorPort:
     Если успешно, то номер порта устанавливается указанным в параметре -p
     Иначе устанавливается номер дефолтного значения порта (7777)
     """
+
     def __set_name__(self, owner, name):
         self.name = name
 
@@ -83,7 +90,7 @@ class DescriptorPort:
             # Если порт прошел проверку, добавляем его в список атрибутов экземпляра
             instance.__dict__[self.name] = value
 
-            
+
 # Метакласс для проверки модуля Server
 class ServerVerifier(type):
     def __init__(self, clsname, bases, dct):
@@ -124,10 +131,12 @@ class ServerVerifier(type):
 
         # Если обнаружено использование недопустимого метода connect, бросаем исключение:
         if 'connect' in methods:
-            raise TypeError('Использование метода connect недопустимо в серверном классе')
+            raise TypeError(
+                'Использование метода connect недопустимо в серверном классе')
         # Если сокет не инициализировался константами SOCK_STREAM(TCP) AF_INET(IPv4), тоже исключение.
         if not ('SOCK_STREAM' in attrs and 'AF_INET' in attrs):
-            raise TypeError('Некорректная инициализация сокета! Использованы параметры не TCP/IP протокола')
+            raise TypeError(
+                'Некорректная инициализация сокета! Использованы параметры не TCP/IP протокола')
         # Обязательно вызываем конструктор предка
         super().__init__(clsname, bases, dct)
 
@@ -162,12 +171,13 @@ class ClientVerifier(type):
         # Если обнаружено использование недопустимого метода accept, listen, socket бросаем исключение:
         for command in ('accept', 'listen'):
             if command in methods:
-                raise TypeError('В классе обнаружено использование запрещённого метода')
+                raise TypeError(
+                    'В классе обнаружено использование запрещённого метода')
         # Вызов get_message или send_message из utils считаем корректным использованием сокетов
         if 'get_message' in methods or 'send_message' in methods:
             pass
         else:
-            raise TypeError('Отсутствуют вызовы функций, работающих с сокетами.')
+            raise TypeError(
+                'Отсутствуют вызовы функций, работающих с сокетами.')
         # Обязательно вызываем конструктор предка
         super().__init__(clsname, bases, dct)
-

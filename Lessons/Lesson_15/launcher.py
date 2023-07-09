@@ -1,5 +1,7 @@
 # launcher под Ubunte Server Mate
-import os, subprocess, time
+import os
+import subprocess
+import time
 
 PROCESS = []
 
@@ -17,7 +19,8 @@ while True:
         #                                     shell=True))
         # Запускаем клиентов:
         for i in range(4):
-            PROCESS.append(subprocess.Popen(f'mate-terminal -- python client_run.py',  shell=True))
+            PROCESS.append(subprocess.Popen(
+                f'mate-terminal -- python client_run.py',  shell=True))
             # PROCESS.append(subprocess.Popen(f'mate-terminal -- python client_run.py -n usertest{i + 1}',  shell=True))
         # PROCESS.append(subprocess.Popen(f'mate-terminal -- python ./client/client.py -n usertest1',  shell=True))
         # print("PROCESS List", PROCESS)
@@ -26,4 +29,4 @@ while True:
             VICTIM = PROCESS.pop()
             # print("VICTIM: ", VICTIM)
             VICTIM.kill()
-            # VICTIM.terminate() 
+            # VICTIM.terminate()

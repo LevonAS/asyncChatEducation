@@ -1,10 +1,10 @@
-import os, datetime
+import os
+import datetime
 from sqlalchemy import create_engine
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import default_comparator
 # from dotenv import load_dotenv
 from server.server_models import BASE, AllUsers, ActiveUsers, LoginHistory, UsersContacts, UsersHistory
-
 
 
 class ServerStorage:
@@ -13,10 +13,11 @@ class ServerStorage:
     Использует SQLite базу данных, реализован с помощью SQLAlchemy ORM.
     '''
     # load_dotenv()
+
     def __init__(self, path):
         # Создаём движок базы данных
-        self.ENGINE = create_engine(f'sqlite:///{path}', 
-                                    echo=False, 
+        self.ENGINE = create_engine(f'sqlite:///{path}',
+                                    echo=False,
                                     pool_recycle=7200,
                                     connect_args={'check_same_thread': False})
         # Формирование таблиц
@@ -27,8 +28,7 @@ class ServerStorage:
         # Когда устанавливаем соединение, очищаем таблицу активных пользователей
         self.session.query(ActiveUsers).delete()
         self.session.commit()
-    
-    
+
     def user_login(self, username, ip_address, port, key) -> None:
         """
         Метод выполняющийся при входе пользователя, записывает в базу факт входа
@@ -104,7 +104,6 @@ class ServerStorage:
         else:
             return False
 
-
     def user_logout(self, username) -> None:
         """
         Метод, фиксирующий отключение пользователя
@@ -118,7 +117,6 @@ class ServerStorage:
         # Применяем изменения
         self.session.commit()
 
-
     def users_list(self):
         """
         Метод возвращает список известных пользователей со временем последнего входа
@@ -130,8 +128,7 @@ class ServerStorage:
         # Возвращаем список кортежей
         # print(query.all()[0][1].strftime('%Y-%m-%d %H:%M:%S'))
         return query.all()
-    
-   
+
     def active_users_list(self):
         """
         Метод возвращает список активных пользователей
@@ -146,7 +143,6 @@ class ServerStorage:
         # Возвращаем список кортежей
         # print(query.all())
         return query.all()
-
 
     def login_history(self, username=None):
         """
@@ -163,21 +159,22 @@ class ServerStorage:
             query = query.filter(AllUsers.name == username)
         return query.all()
 
-
     def process_message(self, sender, recipient):
         '''Метод записывающий в таблицу статистики факт передачи сообщения.'''
         # Получаем ID отправителя и получателя
         sender = self.session.query(AllUsers).filter_by(name=sender).first().id
-        recipient = self.session.query(AllUsers).filter_by(name=recipient).first().id
+        recipient = self.session.query(
+            AllUsers).filter_by(name=recipient).first().id
         # Запрашиваем строки из истории и увеличиваем счётчики
-        sender_row = self.session.query(UsersHistory).filter_by(user=sender).first()
+        sender_row = self.session.query(
+            UsersHistory).filter_by(user=sender).first()
         sender_row.sent += 1
-        recipient_row = self.session.query(UsersHistory).filter_by(user=recipient).first()
+        recipient_row = self.session.query(
+            UsersHistory).filter_by(user=recipient).first()
         recipient_row.accepted += 1
 
         self.session.commit()
 
-        
     def add_contact(self, user, contact):
         """
         Метод добавляет контакт для пользователя
@@ -199,7 +196,6 @@ class ServerStorage:
         self.session.add(contact_row)
         self.session.commit()
 
-    
     def remove_contact(self, user, contact):
         """
         Метод удаления контакта пользователя
@@ -220,7 +216,6 @@ class ServerStorage:
         ).delete()
         self.session.commit()
 
-    
     def get_contacts(self, username):
         """
         Метод возвращает список контактов пользователя
@@ -236,7 +231,6 @@ class ServerStorage:
         # выбираем только имена пользователей и возвращаем их.
         return [contact[1] for contact in query.all()]
 
-    
     def message_history(self):
         """
         Метод возвращает количество переданных и полученных сообщений
@@ -249,7 +243,7 @@ class ServerStorage:
         ).join(AllUsers)
         # Возвращаем список кортежей
         return query.all()
-  
+
 
 # Отладка
 if __name__ == '__main__':

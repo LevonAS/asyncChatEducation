@@ -1,5 +1,5 @@
 import datetime
-from sqlalchemy import Column, Integer, String, ForeignKey, DateTime, Text
+from sqlalchemy import Column, Integer, String, DateTime, Text
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -18,7 +18,6 @@ class KnownUsers(BASE):
         self.id = None
         self.username = user
 
-    
     def __str__(self) -> str:
         return f"KnownUsers (id={self.id}, username={self.username})"
 
@@ -32,18 +31,16 @@ class MessageStat(BASE):
     """
     __tablename__ = "messageStat"
     id = Column('id', Integer, primary_key=True)
-    contact= Column('contact', String)
+    contact = Column('contact', String)
     direction = Column('direction', String)
     message = Column('message', Text)
     date = Column('date', DateTime)
-
 
     def __init__(self, contact, direction, message):
         self.contact = contact
         self.direction = direction
         self.message = message
         self.date = datetime.datetime.now()
-
 
     def __repr__(self):
         return f"MessageStat (id={self.id}, contact={self.contact}, direction={self.direction},\
@@ -62,7 +59,5 @@ class Contacts(BASE):
         self.id = None
         self.name = contact
 
-
     def __repr__(self):
-                return f"Contacts (id={self.id}, name={self.name})"
-
+        return f"Contacts (id={self.id}, name={self.name})"

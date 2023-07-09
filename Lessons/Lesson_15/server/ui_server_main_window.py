@@ -130,5 +130,3 @@ class MainWindow(QMainWindow):
         global rem_window
         rem_window = DelUserDialog(self.database, self.server_thread)
         rem_window.show()
-
-        

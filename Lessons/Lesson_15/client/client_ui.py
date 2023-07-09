@@ -74,21 +74,30 @@ class Ui_MainClientWindow(object):
         self.menubar.addAction(self.menu_2.menuAction())
 
         self.retranslateUi(MainClientWindow)
-        self.btn_clear.clicked.connect(self.text_message.clear) # type: ignore
+        self.btn_clear.clicked.connect(self.text_message.clear)  # type: ignore
         QtCore.QMetaObject.connectSlotsByName(MainClientWindow)
 
     def retranslateUi(self, MainClientWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainClientWindow.setWindowTitle(_translate("MainClientWindow", "Чат Программа alpha release"))
-        self.label_contacts.setText(_translate("MainClientWindow", "Список контактов:"))
-        self.btn_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
-        self.btn_remove_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
-        self.label_history.setText(_translate("MainClientWindow", "История сообщений:"))
-        self.label_new_message.setText(_translate("MainClientWindow", "Введите новое сообщение:"))
-        self.btn_send.setText(_translate("MainClientWindow", "Отправить сообщение"))
+        MainClientWindow.setWindowTitle(_translate(
+            "MainClientWindow", "Чат Программа alpha release"))
+        self.label_contacts.setText(_translate(
+            "MainClientWindow", "Список контактов:"))
+        self.btn_add_contact.setText(_translate(
+            "MainClientWindow", "Добавить контакт"))
+        self.btn_remove_contact.setText(_translate(
+            "MainClientWindow", "Удалить контакт"))
+        self.label_history.setText(_translate(
+            "MainClientWindow", "История сообщений:"))
+        self.label_new_message.setText(_translate(
+            "MainClientWindow", "Введите новое сообщение:"))
+        self.btn_send.setText(_translate(
+            "MainClientWindow", "Отправить сообщение"))
         self.btn_clear.setText(_translate("MainClientWindow", "Очистить поле"))
         self.menu.setTitle(_translate("MainClientWindow", "Файл"))
         self.menu_2.setTitle(_translate("MainClientWindow", "Контакты"))
         self.menu_exit.setText(_translate("MainClientWindow", "Выход"))
-        self.menu_add_contact.setText(_translate("MainClientWindow", "Добавить контакт"))
-        self.menu_del_contact.setText(_translate("MainClientWindow", "Удалить контакт"))
+        self.menu_add_contact.setText(_translate(
+            "MainClientWindow", "Добавить контакт"))
+        self.menu_del_contact.setText(_translate(
+            "MainClientWindow", "Удалить контакт"))
